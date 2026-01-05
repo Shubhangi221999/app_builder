@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="todo-app">
+        <h1>Todo List App</h1>
+        <section class="input-section">
+            <input id="new-task-input" type="text" placeholder="What needs to be done?" autocomplete="off" aria-label="New task input" />
+            <button id="add-task-btn" aria-label="Add task">Add</button>
+        </section>
+        <ul id="task-list" class="task-list" role="list" aria-label="Task list"></ul>
+        <div class="filters" role="group" aria-label="Task filters">
+            <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+            <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <footer class="footer">
+            <button id="clear-completed-btn" aria-label="Clear completed tasks">Clear Completed</button>
+        </footer>
+    </div>
+</body>
+</html>

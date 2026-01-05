@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorfulTodo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header with title and theme selector -->
+  <header>
+    <h1>ColorfulTodo</h1>
+    <select id="theme-select" aria-label="Select theme">
+      <option value="light" selected>Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </header>
+
+  <!-- Section for entering a new task -->
+  <section id="task-input">
+    <input type="text" id="new-task" placeholder="Enter a new task" aria-label="New task">
+    <input type="date" id="new-task-due" aria-label="Due date (optional)">
+    <button id="add-task-btn">Add Task</button>
+  </section>
+
+  <!-- Navigation for filtering tasks -->
+  <nav id="filters">
+    <button id="filter-all" data-filter="all" aria-pressed="true">All</button>
+    <button id="filter-active" data-filter="active" aria-pressed="false">Active</button>
+    <button id="filter-completed" data-filter="completed" aria-pressed="false">Completed</button>
+  </nav>
+
+  <!-- List that will hold task items -->
+  <ul id="task-list" class="task-list" role="list" aria-live="polite"></ul>
+
+  <!-- Footer with attribution -->
+  <footer>
+    <p>© 2024 ColorfulTodo – Developed by Your Name</p>
+  </footer>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
